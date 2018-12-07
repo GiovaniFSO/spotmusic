@@ -1,3 +1,7 @@
 @import "bulma/bulma";
 @import "@fortawesome/fontawesome-free/css/all.css";
-@import "shared/menu"
+@import "./**/*";
+
+html{
+    background-color: $dark;
+}
