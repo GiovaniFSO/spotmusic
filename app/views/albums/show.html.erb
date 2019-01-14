@@ -1,8 +1,13 @@
 <section class="section has-text-white">
   <div class="columns has-text-centered">
-    <div class="column is-half-mobile is-offset-one-quarter-mobile is-2-desktop is-offset-5-desktop">
-      <%= image_tag url_for(@album.cover) %>
-      <p class="is-size-6 has-text-weight-semibold"><%= @album.title %></p>
+    <div class="columns is-mobile  is-offset-one-quarter-mobile is-2-desktop is-offset-5-desktop is-centered">
+      <div class="column is-6-mobile  ">  
+        <%= image_tag url_for(@album.cover) %>
+        <p class="is-size-6 has-text-weight-semibold"><%= @album.title %></p>
+        <div class="column favorite">
+          <%= favorite_button(@album) %>
+        </div>
+      </div>
     </div>
   </div>
  

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :artists, only: :show
     resources :albums, only: :show do
       resources :recently_heards, only: :create
+      post "/favorite", to: "favorites#create", on: :member, defaults: { format: :js, favoritable_type: 'Album' }
+      delete "/favorite", to: "favorites#destroy", on: :member, defaults: { format: :js, favoritable_type: 'Album' }
     end
     resources :favorites, only: :index
     resources :songs, only: [] do
